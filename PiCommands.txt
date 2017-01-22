@@ -1,0 +1,17 @@
+﻿sudo npm cache clean –f
+sudo npm install -g n
+sudo n stable
+sudo npm install npm@latest –g
+
+sudo npm install -g azure-iot-device
+sudo npm install -g azure-iot-device-http
+
+sudo npm install -g iothub-explorer
+sudo npm update iothub-explorer
+
+sudo apt-get install dos2unix
+find /usr/local/lib/node_modules/iothub-explorer -name “*.js” | xargs sudo dos2unix
+
+iothub-explorer login <iothub-connection-string>
+iothub-explorer create <DeviceName> — connection-string
+
